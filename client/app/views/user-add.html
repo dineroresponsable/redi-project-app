@@ -1,0 +1,65 @@
+<form role="form">
+  <div class="form-group">
+    <label for="nombre" class="control-label">Nombre</label>
+    <input type="text" ng-model="user.name" class="form-control" id="nombre" placeholder="Ingresa tu nombre"/>
+  </div>
+  <div class="form-group">
+    <label for="apellido" class="control-label">Apellido</label>
+    <input type="text" ng-model="user.lastname" class="form-control" id="apellido" placeholder="Ingresa tu apellido"/>
+  </div>
+  <div class="form-group">
+    <label for="tipo-documento" class="control-label">Tipo Documento</label>
+    <select class="form-control" ng-model="user.docType" id="tipo-documento">
+      <option value="cedulaCiudadania">Cédula de ciudadania</option>
+      <option value="tarjetaIdentidad">Tarjeta de Identidad</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="numero-documento" class="control-label">Número de documento</label>
+    <input type="text" ng-model="user.docNumber" class="form-control" id="numero-documento" placeholder="Ingresa tu número"/>
+  </div>
+  <div class="form-group">
+    <label for="edad" class="control-label">Edad</label>
+    <input type="number" ng-model="user.age" class="form-control" id="edad" placeholder="Ingresa tu edad"/>
+  </div>
+  <div class="form-group">
+    <label for="ciudad" class="control-label">Ciudad</label>
+    <input type="text" ng-model="user.city" class="form-control" id="ciudad" placeholder="Ingresa tu ciudad"/>
+  </div>
+  <div class="form-group">
+    <label for="departamento" class="control-label">Departamento</label>
+    <input type="text" ng-model="user.state" class="form-control" id="departamento" placeholder="Ingresa tu departamento"/>
+  </div>
+  <div class="form-group">
+    <label for="telefono" class="control-label">Teléfono Fijo</label>
+    <input type="number" ng-model="user.phone" class="form-control" id="telefono" placeholder="Ingresa tu teléfono"/>
+  </div>
+  <div class="form-group">
+    <label for="celular" class="control-label">Teléfono Celular</label>
+    <input type="number" ng-model="user.mobile" class="form-control" id="celular" placeholder="Ingresa tu celular"/>
+  </div>
+  <div class="form-group">
+    <label for="direccion" class="control-label">Dirección</label>
+    <input type="text" ng-model="user.address" class="form-control" id="direccion" placeholder="Ingresa tu dirección"/>
+  </div>
+  <h2>Presupuesto</h2>
+  <h3>Ingresos</h3>
+  <div class="form-group">
+    <label for="ingresos-fijos" class="control-label">Fijos</label>
+    <input type="number" ng-model="user.incomes.fixed" class="form-control" id="ingresos-fijos" placeholder=""/>
+  </div>
+  <div class="form-group">
+    <label for="ingresos-variables" class="control-label">Variables</label>
+    <input type="number" ng-model="user.incomes.variables" class="form-control" id="ingresos-variables" placeholder=""/>
+  </div>
+  <h3>Egresos</h3>
+  <div class="form-group">
+    <label for="egresos-fijos" class="control-label">Fijos</label>
+    <input type="number" ng-model="user.expenses.fixed" class="form-control" id="ingresos-fijos" placeholder=""/>
+  </div>
+  <div class="form-group">
+    <label for="egresos-variables" class="control-label">Variables</label>
+    <input type="number" ng-model="user.expenses.variables" class="form-control" id="ingresos-variables" placeholder=""/>
+  </div>
+  <input type="submit" class="btn btn-primary" ng-click="saveUser()" value="Save"/>
+</form>

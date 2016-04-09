@@ -1,0 +1,21 @@
+<a class="btn btn-primary" href="/#/create/user"><span class="glyphicon glyphicon-plus"></span> Crear Usuario</a>
+<br/>
+<table class="table table-striped">
+	<thead>
+		<th>Nombre</th>
+		<th>Ciudad</th>
+		<th>Operations</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="user in listUser">
+			<td><a ng-href="/#/user/{{ user._id }}">{{ user.name }} {{ user.lastname }}</a></td>
+			<td>{{ user.city }}</td>
+			<td>
+				<div class="button-group">
+		          <a ng-href="/#/user/{{ user._id }}/edit" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a>
+		          <a ng-href="/#/user/{{ user._id }}/delete" class="btn btn-danger"><span class="glyphicon glyphicon-remove-circle"></span></a>
+		        </div>
+			</td>
+		</tr>
+	</tbody>
+</table>
