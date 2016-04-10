@@ -163,4 +163,25 @@ body {
     color: $color-blue-1;
     font: 30px "Helvetica";
   }
+
+  label {
+    display: block;
+    color: $color-green-2;
+    font: 18px "Helvetica";
+  }
+
+  input[type="text"] {
+    padding: 5px 8px;
+    border: 1px solid $color-grey-2;
+    font: 16px "Helvetica";
+    @include border-radius(6px);
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    display: none;
+  }
 }
