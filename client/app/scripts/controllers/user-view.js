@@ -10,7 +10,7 @@ angular.module('rediApp')
   			$scope.cash = 0;
 
   			$scope.user = data;
-        $scope.chartColours = ['#64A75B', '#EA9049', '#E06865', '#91C27E', '#3887C2', '#0098C0'];
+        $scope.chartColours = ['#64A75B', '#EA9049', '#3887C2', '#0098C0', '#E06865', '#91C27E'];
 
         // total values
         $scope.totalIncomes = data.incomes.category1.value + data.incomes.category2.value + data.incomes.category3.value;
