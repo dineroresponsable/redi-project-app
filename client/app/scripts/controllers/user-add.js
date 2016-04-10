@@ -13,7 +13,7 @@ angular.module('rediApp')
 		};
 		$scope.toStep2 = function() {
 			$scope.step2 = true;
-			console.log($scope.step2);
+			$scope.catActive = true;
 		};
 		$scope.toStep3 = function() {
 			$scope.step2 = false;
@@ -23,4 +23,9 @@ angular.module('rediApp')
 			$scope.step3 = false;
 			$scope.step4 = true;
 		};
+
+		angular.element('.to-step2').click(function() {
+			angular.element('.to-step2').parent().addClass('unactive');
+			angular.element(this).parent().removeClass('unactive').addClass('active');
+		});
   });
