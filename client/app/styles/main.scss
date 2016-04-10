@@ -158,22 +158,68 @@ body {
 
 .redi-form {
   text-align: center;
+  width: 700px;
+  margin: 0 auto; 
 
   h1 {
     color: $color-blue-1;
     font: 30px "Helvetica";
   }
 
+  .categories {
+    display: inline-block;
+    width: 100%;
+
+    div {
+      position: relative;
+      float: left;
+      width: 50%;
+      height: 300px;
+      color: $color-white-1;
+      text-decoration: none;
+
+      input[type="radio"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+
+      &.proyecto {
+        background-color: $color-blue-1;
+      }
+
+      &.hogar {
+        background-color: $color-pink-1;
+      }
+
+      &.educacion {
+        background-color: $color-orange-1;
+      }
+
+      &.otros {
+        background-color: $color-yellow-1;
+      }
+    }
+  }
+
+  .section {
+    margin-bottom: 40px;
+  }
+
   label {
     display: block;
     color: $color-green-2;
-    font: 18px "Helvetica";
+    font: 30px "Helvetica";
   }
 
   input[type="text"] {
-    padding: 5px 8px;
+    width: 100%;
+    padding: 10px 15px;
     border: 1px solid $color-grey-2;
-    font: 16px "Helvetica";
+    font: 28px "Helvetica";
     @include border-radius(6px);
   }
 

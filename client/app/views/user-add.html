@@ -1,111 +1,117 @@
 <div>
-  <form class="redi-form">
-    <h1>¿Cual es el sueño que quieres cumplir?</h1>
-    <p>Selecciona la categoria a la que pertenece</p>
-    <div class="categories">
-      <a class="to-step-2" data-id="proyecto">Proyecto</a>
-      <a class="to-step-2" data-id="hogar">Hogar</a>
-      <a class="to-step-2" data-id="educacion">Educacion</a>
-      <a class="to-step-2" data-id="viaje">Viaje</a>
-    </div>
-    <input type="hidden" ng-model="user.goalCategory" value="" />
-
-    <div class="step-2">
-      <div class="form-group">
-        <label>Cuentanos tu sueño</label>
-        <input type="text" ng-model="user.goalName" placeholder="" />
-      </div>
-      <div class="form-group">
-        <label>Cuanto dinero necesitas para hacerlo realidad?</label>
-        <input type="text" ng-model="user.goalValue" placeholder="" />
-      </div>
-      <div class="section">
-        <label>En cuantos meses te propones lograrlo?</label>
-        <input type="text" ng-model="user.goalTime" placeholder="" />
-      </div>
-      <div class="section">
-        <label>Como te llamas?</label>
-        <input type="text" ng-model="user.name" placeholder="Nombre y apellido" />
-      </div>
-      <div class="section">
-        <label>Donde te podemos llamar?</label>
-        <input type="text" ng-model="user.mobile" placeholder="" />
-      </div>
-      <div class="section">
-        <label>Un correo electrónico donde te podamos contactar</label>
-        <input type="text" ng-model="user.email" placeholder="" />
-      </div>
-      <div class="section">
-        <label>Cuál es tu dirección?</label>
-        <input type="text" ng-model="user.address" placeholder="" />
-      </div>
-      <div class="section">
-        <label>En que pueblo o ciudad queda ubicado?</label>
-        <input type="text" ng-model="user.city" placeholder="" />
-      </div>
-      <div class="section">
-        <label>De que departamento es?</label>
-        <input type="text" ng-model="user.state" placeholder="" />
-      </div>
-      <a class"btn to-step-3">Continuar</a>
-      <a class"btn to-step-3"></a>
-    </div>
-    <div class="step-3">
-      <h1>Cuentanos un poco de tus ingresos</h1>
-      <div class="budget">
-        <div class="section">
-          <label>Sueldo</label>
-          <input type="text" ng-model="user.incomes.category1.name" placeholder="" />
-          <input type="text" ng-model="user.incomes.category1.value" placeholder="" />
+    <form class="redi-form">
+        <h1>¿Cual es el sueño que quieres cumplir?</h1>
+        <p>Selecciona la categoria a la que pertenece</p>
+        <div class="categories">
+            <div class="to-step-2 proyecto">
+                <input type="radio" name="inlineRadioOptions" ng-model="user.goalCategory" value="Proyecto"> Proyecto
+            </div>
+            <div class="to-step-2 hogar">
+                <input type="radio" name="inlineRadioOptions" ng-model="user.goalCategory" value="Hogar"> Hogar
+            </div>
+            <div class="to-step-2 educacion">
+                <input type="radio" name="inlineRadioOptions" ng-model="user.goalCategory" value="Educacion"> Educación
+            </div>
+            <div class="to-step-2 otros">
+                <input type="radio" name="inlineRadioOptions" ng-model="user.goalCategory" value="Otros"> Otros
+            </div>
         </div>
-        <div class="section">
-          <label>Arriendos</label>
-          <input type="text" ng-model="user.incomes.category2.name" placeholder="" />
-          <input type="text" ng-model="user.incomes.category2.value" placeholder="" />
+        <div class="step-2">
+            <div class="form-group">
+                <label>Cuentanos tu sueño</label>
+                <input type="text" ng-model="user.goalName" placeholder="" />
+            </div>
+            <div class="form-group">
+                <label>Cuanto dinero necesitas para hacerlo realidad?</label>
+                <input type="text" ng-model="user.goalValue" placeholder="" />
+            </div>
+            <div class="section">
+                <label>En cuantos meses te propones lograrlo?</label>
+                <input type="text" ng-model="user.goalTime" placeholder="" />
+            </div>
+            <div class="section">
+                <label>Como te llamas?</label>
+                <input type="text" ng-model="user.name" placeholder="Nombre y apellido" />
+            </div>
+            <div class="section">
+                <label>Donde te podemos llamar?</label>
+                <input type="text" ng-model="user.mobile" placeholder="" />
+            </div>
+            <div class="section">
+                <label>Un correo electrónico donde te podamos contactar</label>
+                <input type="text" ng-model="user.email" placeholder="" />
+            </div>
+            <div class="section">
+                <label>Cuál es tu dirección?</label>
+                <input type="text" ng-model="user.address" placeholder="" />
+            </div>
+            <div class="section">
+                <label>En que pueblo o ciudad queda ubicado?</label>
+                <input type="text" ng-model="user.city" placeholder="" />
+            </div>
+            <div class="section">
+                <label>De que departamento es?</label>
+                <input type="text" ng-model="user.state" placeholder="" />
+            </div>
+            <a class"btn to-step-3">Continuar</a>
+            <a class"btn to-step-3"></a>
         </div>
-        <div class="section">
-          <label>Otros</label>
-          <input type="text" ng-model="user.incomes.category3.name" placeholder="" />
-          <input type="text" ng-model="user.incomes.category3.value" placeholder="" />
+        <div class="step-3">
+            <h1>Cuentanos un poco de tus ingresos</h1>
+            <div class="budget">
+                <div class="section">
+                    <label>Sueldo</label>
+                    <input type="text" ng-model="user.incomes.category1.name" placeholder="" />
+                    <input type="text" ng-model="user.incomes.category1.value" placeholder="" />
+                </div>
+                <div class="section">
+                    <label>Arriendos</label>
+                    <input type="text" ng-model="user.incomes.category2.name" placeholder="" />
+                    <input type="text" ng-model="user.incomes.category2.value" placeholder="" />
+                </div>
+                <div class="section">
+                    <label>Otros</label>
+                    <input type="text" ng-model="user.incomes.category3.name" placeholder="" />
+                    <input type="text" ng-model="user.incomes.category3.value" placeholder="" />
+                </div>
+                <a class"btn to-step-4">Continuar</a>
+            </div>
         </div>
-        <a class"btn to-step-4">Continuar</a>
-      </div>
-    </div>
-    <div class="step-4">
-      <h1>Cuentanos en que gastas tu dinero</h1>
-      <div class="budget">
-        <div class="section">
-          <label>Vivienda</label>
-          <input type="text" ng-model="user.expenses.category1.name" placeholder="" />
-          <input type="text" ng-model="user.expenses.category1.value" placeholder="" />
+        <div class="step-4">
+            <h1>Cuentanos en que gastas tu dinero</h1>
+            <div class="budget">
+                <div class="section">
+                    <label>Vivienda</label>
+                    <input type="text" ng-model="user.expenses.category1.name" placeholder="" />
+                    <input type="text" ng-model="user.expenses.category1.value" placeholder="" />
+                </div>
+                <div class="section">
+                    <label>Transporte</label>
+                    <input type="text" ng-model="user.expenses.category2.name" placeholder="" />
+                    <input type="text" ng-model="user.expenses.category2.value" placeholder="" />
+                </div>
+                <div class="section">
+                    <label>Alimentación</label>
+                    <input type="text" ng-model="user.expenses.category3.name" placeholder="" />
+                    <input type="text" ng-model="user.expenses.category3.value" placeholder="" />
+                </div>
+                <div class="section">
+                    <label>Educación</label>
+                    <input type="text" ng-model="user.expenses.category4.name" placeholder="" />
+                    <input type="text" ng-model="user.expenses.category4.value" placeholder="" />
+                </div>
+                <div class="section">
+                    <label>Medicina</label>
+                    <input type="text" ng-model="user.expenses.category5.name" placeholder="" />
+                    <input type="text" ng-model="user.expenses.category5.value" placeholder="" />
+                </div>
+                <div class="section">
+                    <label>Otros</label>
+                    <input type="text" ng-model="user.expenses.category6.name" placeholder="" />
+                    <input type="text" ng-model="user.expenses.category6.value" placeholder="" />
+                </div>
+            </div>
         </div>
-        <div class="section">
-          <label>Transporte</label>
-          <input type="text" ng-model="user.expenses.category2.name" placeholder="" />
-          <input type="text" ng-model="user.expenses.category2.value" placeholder="" />
-        </div>
-        <div class="section">
-          <label>Alimentación</label>
-          <input type="text" ng-model="user.expenses.category3.name" placeholder="" />
-          <input type="text" ng-model="user.expenses.category3.value" placeholder="" />
-        </div>
-        <div class="section">
-          <label>Educación</label>
-          <input type="text" ng-model="user.expenses.category4.name" placeholder="" />
-          <input type="text" ng-model="user.expenses.category4.value" placeholder="" />
-        </div>
-        <div class="section">
-          <label>Medicina</label>
-          <input type="text" ng-model="user.expenses.category5.name" placeholder="" />
-          <input type="text" ng-model="user.expenses.category5.value" placeholder="" />
-        </div>
-        <div class="section">
-          <label>Otros</label>
-          <input type="text" ng-model="user.expenses.category6.name" placeholder="" />
-          <input type="text" ng-model="user.expenses.category6.value" placeholder="" />
-        </div>
-      </div>
-    </div>
-    <input type="submit" class="btn" ng-click="saveUser()" value="Guardar"/>
-  </form>
+        <input type="submit" class="btn" ng-click="saveUser()" value="Guardar"/>
+    </form>
 </div>
