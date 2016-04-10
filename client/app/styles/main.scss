@@ -161,23 +161,60 @@ body {
     }
 }
 
-.redi-form {
-    text-align:center;
-    width:700px;
-    margin:0 auto 40px;
+.redi {
+    text-align: center;
 
     h1 {
         color:$color-blue-1;
         font-size:30px;
         margin-top: 45px;
+
+        span {
+            margin-top: 15px;
+            display: block;
+            font-size: 26px;
+        }
     }
 
     h2 {
+        display: block;
+        width:  100%;
         color:$color-grey-2;
         font-size:18px;
         font-weight:100;
         margin-top:0;
     }
+
+    h3 {
+        display: block;
+        width:  100%;
+        color:$color-green-2;
+        font-size: 24px;
+    }
+
+    .table {
+        th {
+            background-color: $color-green-1;
+            color: $color-white-1;
+            text-align: center;
+        }
+
+        &.table-striped {
+            color: $color-grey-1;
+            
+            tr:nth-of-type(odd) {
+                background-color: $color-white-2;
+            }
+        }
+
+
+    }
+}
+
+.redi-form {
+    text-align:center;
+    width: 1024px;
+    margin:0 auto 40px;
 
     label {
         display:block;
@@ -274,7 +311,7 @@ body {
         margin-bottom:40px;
     }
 
-    .budget-section {
+    .expenses-section {
             display:inline-block;
 
             input {
@@ -287,15 +324,30 @@ body {
         }
     }
 
+    .income-section {
+            display: table;
+
+            input {
+                display: table-cell;
+                width: 30%;
+                margin-right: 3%;
+
+                &:last-child {
+                    margin-left: 0%;
+            }
+        }
+    }
+
     .form-group {
         margin-bottom: 20px;
     }
 }
 
 .state {
+    float: left;
     display: table;
     text-align: center;
-    margin: 20px 10% 40px;
+    margin: 80px 10% 40px;
 
     div {
         display: table-cell;

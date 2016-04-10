@@ -1,63 +1,66 @@
 <!--<ng-include src="'views/user-nav.html'"></ng-include>-->
-<div class="col-md-12">
-	<h2 class="text-center">
-		¡Tu resumen!<br><br>{{ user.name }}
-	</h2>
-	<div class="col-md-4 col-md-offset-2">
-		<h3 class="text-center">Ingresos</h3>
-		<canvas class="chart chart-pie" chart-data="incomesData" chart-labels="incomesLabels"></canvas>
-	</div>
-	<div class="col-md-4">
-		<h3 class="text-center">Gastos</h3>
-		<canvas class="chart chart-pie" chart-data="expensesData" chart-labels="expensesLabels"></canvas>
-	</div>
+<div class="redi">
 	<div class="col-md-12">
-		<h3 class="text-center">Ingresos - gastos</h3>
-		<div class="col-md-8 col-md-offset-2">
-			<table class="table table-striped">
-				<thead>
-					<tr>
-						<th>Tipo</th>
-						<th>Valor</th>
-						<th>Total</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Ingresos</td>
-						<td>{{ totalIncomes }}</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Gastos</td>
-						<td>{{ totalExpenses }}</td>
-						<td>{{ (totalExpenses * 100) / totalIncomes }} %</td>
-					</tr>
-					<tr>
-						<td>Balance</td>
-						<td>{{ cash }}</td>
-						<td>{{ (cash * 100) / totalIncomes }} %</td>
-					</tr>
-				</tbody>
-			</table>
+		<h1>
+			¡Tu resumen!
+			<span>{{ user.name }}</span>
+		</h1>
+		<div class="col-md-4 col-md-offset-2">
+			<h3>Ingresos</h3>
+			<canvas class="chart chart-pie" chart-data="incomesData" chart-labels="incomesLabels"></canvas>
 		</div>
-		<div class="col-md-6 col-md-offset-3">
-			<canvas class="chart chart-bar" chart-data="totalData" chart-labels="totalTime" chart-series="totalLabels"></canvas>
+		<div class="col-md-4">
+			<h3 class="text-center">Gastos</h3>
+			<canvas class="chart chart-pie" chart-data="expensesData" chart-labels="expensesLabels"></canvas>
+		</div>
+		<div class="col-md-12">
+			<h3>Ingresos - gastos</h3>
+			<div class="col-md-8 col-md-offset-2">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Tipo</th>
+							<th>Monto</th>
+							<th>Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Ingresos</td>
+							<td>{{ totalIncomes }}</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Gastos</td>
+							<td>{{ totalExpenses }}</td>
+							<td>{{ (totalExpenses * 100) / totalIncomes }} %</td>
+						</tr>
+						<tr>
+							<td>Balance</td>
+							<td>{{ cash }}</td>
+							<td>{{ (cash * 100) / totalIncomes }} %</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-md-6 col-md-offset-3">
+				<canvas class="chart chart-bar" chart-data="totalData" chart-labels="totalTime" chart-series="totalLabels"></canvas>
+			</div>
 		</div>
 	</div>
-</div>
-<!--<canvas class="chart chart-pie" chart-data="totalData" chart-labels="totalLabels"></canvas>-->
+	<!--<canvas class="chart chart-pie" chart-data="totalData" chart-labels="totalLabels"></canvas>-->
 
-<div class="state">
-	<div class="left-text">
-		<p>¡Tus ingresos superan tus gastos mensuales!</p>
-	</div>
-	<div class="bulb">
-		<img src="images/green-bulb.png" />
-	<!--	<img class="bulb" src="images/red-bulb.png" />-->
-	</div>
-	<div class="right-text">
-		<p>¡Estas cada vez más cerca de cumplir tu sueño!</p>
+	<div class="state">
+		<div class="left-text">
+			<p>¡Tus ingresos superan tus gastos mensuales!</p>
+		</div>
+		<div class="bulb">
+			<img src="images/green-bulb.png" />
+		<!--	<img class="bulb" src="images/red-bulb.png" />-->
+		</div>
+		<div class="right-text">
+			<p>¡Estas cada vez más cerca de cumplir tu sueño!</p>
+		</div>
 	</div>
 </div>
 
