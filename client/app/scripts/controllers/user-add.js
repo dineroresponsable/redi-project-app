@@ -8,7 +8,7 @@ angular.module('rediApp')
 		$scope.step4 = false;
 		$scope.saveUser = function() {
 			User.post($scope.user).then(function() {
-				$location.path('/users');
+				$location.path('/user/' + $scope.user._id);
 			});
 		};
 		$scope.toStep2 = function() {
