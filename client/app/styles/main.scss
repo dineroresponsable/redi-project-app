@@ -54,6 +54,7 @@ body {
 
 /* Custom page footer */
 .footer {
+    text-align: center;
     padding-top:19px;
     color:#777;
     border-top:1px solid #e5e5e5;
@@ -196,6 +197,20 @@ body {
             color:$color-white-1;
             text-decoration:none;
             display:table;
+            transition: all .2s ease-in-out;
+
+            &:hover {
+                transform: scale(1.05);
+                z-index: 1;
+            }
+
+            &.active {
+                width: 100%;
+            }
+
+            &.unactive {
+                display: none;
+            }
 
             p {
                     position:relative;
@@ -247,8 +262,9 @@ body {
             input {
                 float:left;
                 width:48%;
-                &:nth-child(2) {
-                        margin-right:4%;
+
+                &:last-child {
+                    margin-left: 4%;
             }
         }
     }
