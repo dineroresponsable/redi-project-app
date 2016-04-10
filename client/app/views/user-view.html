@@ -1,7 +1,7 @@
 <!--<ng-include src="'views/user-nav.html'"></ng-include>-->
 <div class="redi">
 	<div class="col-md-12">
-		<h1>
+		<h1 class="big">
 			¡Tu resumen!
 			<span>{{ user.name }}</span>
 		</h1>
@@ -61,5 +61,58 @@
 			<p>¡Estas cada vez más cerca de cumplir tu sueño!</p>
 		</div>
 	</div>
+
+	<a class="btn btn-primary btn-lg btn-tip" data-toggle="modal" data-target="#myModal">Logra tu sueño</a>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      
+      <div class="modal-body redi">
+      	<div class="tip">
+			<h1 class="highlight">¡Cumple tu sueño ahora!</h1>
+			<p>Tenemos la solución para que puedas lograrlo</p>
+
+			<table class="table table-striped tip-table">
+				<thead>
+					<tr>
+						<th>
+							Sugerencia 1 - Establece un Plan de Ahorro
+						</th>
+						<th>
+							Sugerencia 2 - Toma un Crédito
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<ul>
+								<li>Durante 10 meses ahorra los <span>$50.000</span> que te sobran cada mes, y así podrás tener los <span class="price">$500.000</span> que necesitas para cumplir tu sueño</li>
+								<li>
+									<img class="davivienda" src="images/davivienda.png" alt="redi" /> Para que tu dinero esté seguro, abre una Cuenta de Ahorros en Davivienda sin cuota de manejo
+								</li>
+							</ul>
+						</td>
+						<td>
+							<ul>
+								<li>¡Tenemos el crédito perfecto para ti! Durante <span>20 meses</span> paga cómodas cuotas de <span>$28.000</span> y date la oportunidad de cumplir tu sueño hoy mismo</li>
+								<li><img class="finagro" src="images/finagro.png" alt="redi" />
+									Toma tu crédito con Finagro con una <span>tasa de interés DTF +7</span>
+								</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
 

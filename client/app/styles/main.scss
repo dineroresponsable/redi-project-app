@@ -174,6 +174,17 @@ body {
             display: block;
             font-size: 26px;
         }
+
+        &.big {
+            font-size: 60px;
+        }
+
+        &.highlight {
+            background-color: $color-blue-1;
+            color: $color-white-1;
+            padding: 20px 0;
+            margin-bottom: 0;
+        }
     }
 
     h2 {
@@ -197,17 +208,22 @@ body {
             background-color: $color-green-1;
             color: $color-white-1;
             text-align: center;
+            font-size: 25px;
+            font-weight: 100;
+        }
+
+        td {
+            font-size: 20px;
+            font-weight: 200;
         }
 
         &.table-striped {
             color: $color-grey-1;
-            
+
             tr:nth-of-type(odd) {
                 background-color: $color-white-2;
             }
         }
-
-
     }
 }
 
@@ -311,6 +327,11 @@ body {
         margin-bottom:40px;
     }
 
+    .budget-title {
+        color: $color-green-1;
+        font-size: 40px;
+    }
+
     .expenses-section {
             display:inline-block;
 
@@ -341,6 +362,13 @@ body {
     .form-group {
         margin-bottom: 20px;
     }
+}
+
+.disclaimer {
+    font-size: 16px;
+    margin-top: -5px;
+    color: $color-grey-2;
+    margin-bottom: 40px;
 }
 
 .state {
@@ -380,4 +408,58 @@ body {
             }
         }
     }
+}
+
+.btn-tip {
+    margin-bottom: 40px;
+}
+
+.tip {
+    h1 {
+        margin-top: 0;
+    }
+
+    p {
+        font-size: 25px;
+        font-weight: 200;
+        background-color: $color-blue-2;
+        color: $color-green-1;
+        padding: 10px 0;
+        margin-bottom: 30px;
+    }
+
+    ul {
+        text-align: left;
+        margin: 20px 0;
+
+        li {
+            margin-bottom: 20px;
+
+            img {
+                position: relative;
+                display: inline-block;
+
+                &.finagro {
+                    height: 50px;
+                }
+
+                &.davivienda {
+                    height: 30px;
+                    top: -4px;
+                }
+            }
+
+            span {
+                color: $color-pink-1;
+            }
+        }
+    }
+}
+
+.modal-lg {
+    width: 1200px;
+}
+
+.modal-body {
+    padding: 30px 30px 0;
 }

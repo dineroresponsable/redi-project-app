@@ -56,7 +56,11 @@
             <a class="btn to-step-3" ng-click="toStep3()">Continuar</a>
         </div>
         <div class="step-3" ng-show="step3">
+            <h1 class="budget-title">Presupuesto</h1>
+            <p class="disclaimer"><strong>¿Qué es un presupuesto?</strong> Un presupuesto es una herramienta que te permite organizar los gastos, totalizar los ingresos y ahorrar algo de dinero para cumplir tus sueños y los de tu familia.</p>
             <h1>Cuéntanos un poco de tus ingresos</h1>
+            <p class="disclaimer"><strong>¿Qué son los ingresos?</strong>
+Los ingresos son tus entradas de dinero y las de tu familia, algunos pueden ser fijos como un sueldo y otros pueden ser ocasionales</p>
             <div class="budget">
                 <div class="section income-section">
                     <input type="text" ng-model="user.incomes.category1.name" placeholder="Tipo" />
@@ -78,6 +82,8 @@
         </div>
         <div class="step-4" ng-show="step4">
             <h1>Cuentanos en que gastas tu dinero</h1>
+            <p class="disclaimer"><strong>¿Qué son los gastos?</strong>
+Los gastos son las salidas de dinero con las cuales adquieres productos y servicios. Estos pueden estar relacionados con tu hogar, tu negocio, pago de deudas y lujos, entre otros.</p>
             <div class="budget">
                 <div class="section expenses-section">
                     <label>Vivienda</label>
