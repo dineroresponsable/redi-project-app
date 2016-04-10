@@ -3,6 +3,7 @@
 angular.module('rediApp')
   .controller('UserViewCtrl', function ($scope, $routeParams, User) {
   		$scope.viewUser = true;
+      window.scrollTo(0, 0);
   		var userObj = User.one($routeParams.id);
   		userObj.get().then(function(data) {
   			$scope.totalIncomes = 0;
@@ -14,7 +15,7 @@ angular.module('rediApp')
 
         // total values
         $scope.totalIncomes = data.incomes.category1.value + data.incomes.category2.value + data.incomes.category3.value;
-        $scope.totalExpenses = data.expenses.category1.value + data.expenses.category2.value + data.expenses.category3.value;
+        $scope.totalExpenses = data.expenses.category1.value + data.expenses.category2.value + data.expenses.category3.value + data.expenses.category4.value + data.expenses.category5.value + data.expenses.category6.value;
         $scope.cash = $scope.totalIncomes - $scope.totalExpenses;
 
         $scope.chartOptions = {
@@ -29,8 +30,8 @@ angular.module('rediApp')
   			$scope.incomesData = [data.incomes.category1.value, data.incomes.category2.value, data.incomes.category3.value];
 
   			// expenses pie
-  			$scope.expensesLabels = [data.expenses.category1.name, data.expenses.category2.name, data.expenses.category3.name];
-  			$scope.expensesData = [data.expenses.category1.value, data.expenses.category2.value, data.expenses.category3.value];
+  			$scope.expensesLabels = [data.expenses.category1.name, data.expenses.category2.name, data.expenses.category3.name, data.expenses.category4.name, data.expenses.category5.name, data.expenses.category6.name];
+  			$scope.expensesData = [data.expenses.category1.value, data.expenses.category2.value, data.expenses.category3.value, data.expenses.category4.value, data.expenses.category5.value, data.expenses.category6.value];
 
         // total bars chart
   			$scope.totalTime = ['Hoy'];
