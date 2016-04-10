@@ -25,7 +25,12 @@ body {
 
 /* Custom page header */
 .header {
-    background:$color-white-1;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background:$color-white-1;    
     border-bottom:1px solid $color-grey-1;
 
     .navbar {
@@ -58,6 +63,14 @@ body {
     padding-top:19px;
     color:#777;
     border-top:1px solid #e5e5e5;
+
+    .container {
+        margin-top: 0;
+
+        p {
+            margin: 10px;
+        }
+    }
 }
 
 .container-narrow>hr {
@@ -103,6 +116,11 @@ body {
 }
 
 /* REDI */
+
+.container {
+    margin-top: 121px;
+}
+
 .btn {
     padding:8px 15px;
     display:inline-block;
@@ -126,7 +144,7 @@ body {
 
     .cartoon-cta {
         position:absolute;
-        right:10%;
+        right:14%;
         bottom:0px;
         width:23%;
 
@@ -138,7 +156,7 @@ body {
         .btn {
             position:absolute;
             top:10%;
-            right:-15%;
+            right: -26%;
         }
     }
 }
@@ -271,5 +289,43 @@ body {
 
     .form-group {
         margin-bottom: 20px;
+    }
+}
+
+.state {
+    display: table;
+    text-align: center;
+    margin: 20px 10% 40px;
+
+    div {
+        display: table-cell;
+        vertical-align: middle;
+
+        &.left-text,
+        &.right-text {
+            width: 35%;
+        }
+
+        &.left-text {
+            text-align: right;
+        }
+
+        &.right-text {
+            text-align: left;
+        }
+
+        p {
+            color: $color-grey-1;
+            font-size: 30px;
+            font-weight: 200;
+        }
+
+        &.bulb {
+            padding: 0 2%;
+
+            img {
+                width: 80%;
+            }
+        }
     }
 }
