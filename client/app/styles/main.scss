@@ -3,6 +3,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+// variables:scss
+@import "../app/styles/variables.scss";
+// end variables
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -24,8 +28,24 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
+  background: $color-white-1;
+  border-bottom: 1px solid $color-grey-1;
+
+  .navbar {
+    display: none;
+  }
+
+  a {
+    display: block;
+    height: 100px;
+    text-align: center;
+    margin: 20px 0; 
+
+    img {
+      display: inline-block;
+      height: 100px;
+    }
+  }
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
@@ -70,7 +90,9 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 730px;
+    width: 1280px;
+    max-width: 1920px;
+    padding: 0;
   }
 
   /* Remove the padding we set earlier */
@@ -82,10 +104,63 @@ body {
   }
   /* Space out the masthead */
   .header {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
   }
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+  }
+}
+
+
+/* REDI */
+
+.btn {
+  padding: 8px 15px;
+  display: inline-block;
+  background: $color-pink-1;
+  color: $color-white-1;
+  font: 25px "Helvetica";
+  @include border-radius(6px);
+
+  &:hover {
+    background: $color-orange-1;
+    color: $color-white-1;
+  }
+}
+
+.advertising {
+  position: relative;
+  background: $color-white-2;
+
+  .back {
+    width: 100%;
+  }
+
+  .cartoon-cta {
+    position: absolute;
+    right: 10%;
+    bottom: 0px;
+    width: 23%;
+
+    img {
+      display: inline-block;
+      width: 100%;
+    }
+
+    .btn {
+      position: absolute;
+      top: 10%;
+      right: -15%;
+    }
+  }
+}
+
+.redi-form {
+  text-align: center;
+
+  h1 {
+    color: $color-blue-1;
+    font: 30px "Helvetica";
   }
 }

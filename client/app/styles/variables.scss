@@ -1,0 +1,21 @@
+// Colors
+
+$color-white-1: #fff;
+$color-white-2: #F8F0E5;
+$color-grey-1: #556270;
+$color-grey-2: #9397A2;
+$color-green-1: #1B676C;
+$color-green-2: #519448;
+$color-green-3: #89BD2F;
+$color-blue-1: #5EBEBB;
+$color-pink-1: #EC6A6D;
+$color-orange-1: #EF8165;
+$color-yellow-1: #F2D33C;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+

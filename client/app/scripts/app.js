@@ -17,10 +17,10 @@ angular
     RestangularProvider.setBaseUrl('http://localhost:3000');
 
     $routeProvider
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+      .when('/main', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main'
       })
       .when('/users', {
         templateUrl: 'views/users.html',
@@ -48,7 +48,7 @@ angular
         controllerAs: 'userEdit'
       })
       .otherwise({
-        redirectTo: '/users'
+        redirectTo: '/main'
       });
   })
   .factory('UserRestangular', function(Restangular) {
