@@ -1,14 +1,15 @@
 'use strict';
 
 angular.module('rediApp')
-  .controller('UserAddCtrl', function ($scope, User, $location) {
+  .controller('UserAddCtrl', function ($scope, User, $location, $routeParams) {
 		$scope.user = {};
 		$scope.step2 = false;
 		$scope.step3 = false;
 		$scope.step4 = false;
 		$scope.saveUser = function() {
 			User.post($scope.user).then(function() {
-				$location.path('/user/' + $scope.user._id);
+				console.log($scope.user);
+				$location.path('/user/' + $routeParams.id);
 			});
 		};
 		$scope.toStep2 = function() {
