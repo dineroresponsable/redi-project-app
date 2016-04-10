@@ -47,11 +47,12 @@
         <label>De que departamento es?</label>
         <input type="text" ng-model="user.state" placeholder="" />
       </div>
-      <a class"btn to-step-3">Continuar</a>     
+      <a class"btn to-step-3">Continuar</a>
+      <a class"btn to-step-3"></a>
     </div>
     <div class="step-3">
       <h1>Cuentanos un poco de tus ingresos</h1>
-      <div class="budget"> 
+      <div class="budget">
         <div class="section">
           <label>Sueldo</label>
           <input type="text" ng-model="user.incomes.category1.name" placeholder="" />
@@ -72,7 +73,7 @@
     </div>
     <div class="step-4">
       <h1>Cuentanos en que gastas tu dinero</h1>
-      <div class="budget"> 
+      <div class="budget">
         <div class="section">
           <label>Vivienda</label>
           <input type="text" ng-model="user.expenses.category1.name" placeholder="" />
@@ -87,7 +88,7 @@
           <label>Alimentación</label>
           <input type="text" ng-model="user.expenses.category3.name" placeholder="" />
           <input type="text" ng-model="user.expenses.category3.value" placeholder="" />
-        </div>  
+        </div>
         <div class="section">
           <label>Educación</label>
           <input type="text" ng-model="user.expenses.category4.name" placeholder="" />
@@ -108,5 +109,3 @@
     <input type="submit" class="btn" ng-click="saveUser()" value="Guardar"/>
   </form>
 </div>
-    
-

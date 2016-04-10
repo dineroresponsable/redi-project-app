@@ -11,7 +11,8 @@
 angular
   .module('rediApp', [
     'ngRoute',
-    'restangular'
+    'restangular',
+    'chart.js'
   ])
   .config(function ($routeProvider, RestangularProvider) {
     RestangularProvider.setBaseUrl('http://localhost:3000');

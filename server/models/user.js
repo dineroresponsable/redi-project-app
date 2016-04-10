@@ -4,31 +4,47 @@ var mongoose = require('mongoose');
 var UserSchema = new mongoose.Schema({
 	name: {
 		type: String,
-		required: true
+		required: false
 	},
 	lastname: {
 		type: String,
-		required: true
+		required: false
+	},
+	goalCategory: {
+		type: String,
+		required: false
+	},
+	goalName: {
+		type: String,
+		required: false
+	},
+	goalValue: {
+		type: String,
+		required: false
+	},
+	goalTime: {
+		type: Number,
+		required: false
 	},
 	docType: {
 		type: String,
-		required: true
+		required: false
 	},
 	docNumber: {
 		type: String,
-		required: true
+		required: false
 	},
 	age: {
 		type: Number,
-		required: true
+		required: false
 	},
 	city: {
 		type: String,
-		required: true
+		required: false
 	},
 	state: {
 		type: String,
-		required: true
+		required: false
 	},
 	phone: {
 		type: Number,
@@ -40,26 +56,104 @@ var UserSchema = new mongoose.Schema({
 	},
 	address: {
 		type: String,
-		required: true
+		required: false
+	},
+	email: {
+		type: String,
+		required: false
 	},
 	incomes: {
-		fixed: {
-			type: Number,
-			required: false
+		category1: {
+			name: {
+				type: String,
+				required: false
+			},
+			value: {
+				type: Number,
+				required: false
+			}
 		},
-		variables: {
-			type: Number,
-			required: false
+		category2: {
+			name: {
+				type: String,
+				required: false
+			},
+			value: {
+				type: Number,
+				required: false
+			}
+		},
+		category3: {
+			name: {
+				type: String,
+				required: false
+			},
+			value: {
+				type: Number,
+				required: false
+			}
 		}
 	},
 	expenses: {
-		fixed: {
-			type: Number,
-			required: false
+		category1: {
+			name: {
+				type: String,
+				required: false
+			},
+			value: {
+				type: Number,
+				required: false
+			}
 		},
-		variables: {
-			type: Number,
-			required: false
+		category2: {
+			name: {
+				type: String,
+				required: false
+			},
+			value: {
+				type: Number,
+				required: false
+			}
+		},
+		category3: {
+			name: {
+				type: String,
+				required: false
+			},
+			value: {
+				type: Number,
+				required: false
+			}
+		},
+		category4: {
+			name: {
+				type: String,
+				required: false
+			},
+			value: {
+				type: Number,
+				required: false
+			}
+		},
+		category5: {
+			name: {
+				type: String,
+				required: false
+			},
+			value: {
+				type: Number,
+				required: false
+			}
+		},
+		category6: {
+			name: {
+				type: String,
+				required: false
+			},
+			value: {
+				type: Number,
+				required: false
+			}
 		}
 	}
 });

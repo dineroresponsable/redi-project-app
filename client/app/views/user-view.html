@@ -1,7 +1,10 @@
 <ng-include src="'views/user-nav.html'"></ng-include>
-<h3>{{ user.name }}</h3>
-<p>{{ user.lastname }}</p>
-<div ng-show="user.info">
-	<h4>Description</h4>
-	<p>{{ user.city }}</p>
+<h3>{{ user.name }} {{ user.lastname }}</h3>
+<div class="col-md-6">
+	<canvas class="chart chart-doughnut" chart-data="incomesData" chart-labels="incomesLabels"></canvas>
 </div>
+<div class="col-md-6">
+	<canvas class="chart chart-doughnut" chart-data="expensesData" chart-labels="expensesLabels"></canvas>
+</div>
+<canvas class="chart chart-pie" chart-data="totalData" chart-labels="totalLabels"></canvas>
+
